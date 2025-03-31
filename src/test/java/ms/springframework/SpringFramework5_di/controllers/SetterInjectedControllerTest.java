@@ -1,8 +1,6 @@
 package ms.springframework.SpringFramework5_di.controllers;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import ms.springframework.SpringFramework5_di.services.GreetingServiceImpl;
+import ms.springframework.SpringFramework5_di.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +11,7 @@ class SetterInjectedControllerTest {
   @BeforeEach
   void setUp() {
     controller = new SetterInjectedController();
-    controller.setGreetingService(new GreetingServiceImpl());
+    controller.setGreetingService(new ConstructorGreetingService());
   }
 
   @Test

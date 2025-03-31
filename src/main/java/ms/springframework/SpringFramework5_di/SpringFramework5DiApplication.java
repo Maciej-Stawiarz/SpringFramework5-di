@@ -1,7 +1,7 @@
 package ms.springframework.SpringFramework5_di;
 
 import ms.springframework.SpringFramework5_di.controllers.ConstructorInjectedController;
-import ms.springframework.SpringFramework5_di.controllers.MyController;
+import ms.springframework.SpringFramework5_di.controllers.PrimaryInjectedController;
 import ms.springframework.SpringFramework5_di.controllers.PropertyInjectedController;
 import ms.springframework.SpringFramework5_di.controllers.SetterInjectedController;
 import org.springframework.boot.SpringApplication;
@@ -15,9 +15,9 @@ public class SpringFramework5DiApplication {
 		ApplicationContext context = SpringApplication
 				.run(SpringFramework5DiApplication.class, args);
 
-		MyController myController = (MyController) context.getBean("myController");
-		String greeting = myController.sayHello();
-		System.out.println(greeting);
+		System.out.println("-----------------Primary");
+		PrimaryInjectedController primaryInjectedController = (PrimaryInjectedController) context.getBean("primaryInjectedController");
+		System.out.println(primaryInjectedController.getGreeting());
 
 		System.out.println("-----------------Property");
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) context.getBean("propertyInjectedController");

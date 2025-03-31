@@ -1,6 +1,7 @@
 package ms.springframework.SpringFramework5_di;
 
 import ms.springframework.SpringFramework5_di.controllers.ConstructorInjectedController;
+import ms.springframework.SpringFramework5_di.controllers.I18nController;
 import ms.springframework.SpringFramework5_di.controllers.PrimaryInjectedController;
 import ms.springframework.SpringFramework5_di.controllers.PropertyInjectedController;
 import ms.springframework.SpringFramework5_di.controllers.SetterInjectedController;
@@ -30,5 +31,9 @@ public class SpringFramework5DiApplication {
 		System.out.println("-----------------Constructor");
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) context.getBean("constructorInjectedController");
 		System.out.println(constructorInjectedController.getGreeting());
+
+		System.out.println("-----------------i18n");
+		I18nController i18nController = (I18nController) context.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
 	}
 }

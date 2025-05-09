@@ -1,5 +1,3 @@
 spring:
   application:
     name: SpringFramework5-di
-  profiles:
-    active: ES

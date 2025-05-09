@@ -7,6 +7,7 @@ import ms.springframework.spring.controllers.inittypes.manual.SetterController;
 import ms.springframework.spring.controllers.inittypes.spring.ConstructorInjectedController;
 import ms.springframework.spring.controllers.inittypes.spring.PropertyInjectedController;
 import ms.springframework.spring.controllers.inittypes.spring.SetterInjectedController;
+import ms.springframework.spring.controllers.javaconfig.JavaConfigController;
 import ms.springframework.spring.controllers.primary.PrimaryController;
 import ms.springframework.spring.controllers.profiles.LanguageController;
 import ms.springframework.spring.services.initypes.ConstructorService;
@@ -70,5 +71,11 @@ public class SpringFramework5DiApplication {
 		System.out.println("\n--- Component scan annotation ---");
 		ComponentScanController componentScanController = (ComponentScanController) context.getBean("componentScanController");
 		System.out.println(componentScanController.sayGreeting());
+
+
+
+		System.out.println("\n--- Java config ---");
+		JavaConfigController javaConfigController = (JavaConfigController) context.getBean("javaConfigController");
+		System.out.println(javaConfigController.sayGreeting());
 	}
 }
